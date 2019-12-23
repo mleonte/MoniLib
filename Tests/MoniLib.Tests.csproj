@@ -13,8 +13,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ClassLibrary1\MoniLib.Collections.csproj" />
-    <ProjectReference Include="..\MoniLib.Serialization\MoniLib.Data.csproj" />
+    <ProjectReference Include="..\MoniLib.Collections\MoniLib.Collections.csproj" />
+    <ProjectReference Include="..\MoniLib.Data\MoniLib.Data.csproj" />
   </ItemGroup>
 
 </Project>
