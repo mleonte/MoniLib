@@ -1,0 +1,7 @@
+.vs/*
+MoniLib.Collections/bin/*
+MoniLib.Collections/obj/*
+MoniLib.Data/bin/*
+MoniLib.Data/obj/*
+Tests/bin/*
+Tests/obj/*
