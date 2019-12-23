@@ -19,6 +19,12 @@ namespace MoniLib.Data
             }
         }
 
+        private static JsonSerializerSettings Settings =
+            new JsonSerializerSettings
+            {
+                ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+            };
+
         public JsonDataCollection(string filePath)
         {
             FilePath = filePath;
@@ -61,11 +67,13 @@ namespace MoniLib.Data
         {
             if (objects != null)
             {
-                var json = JsonConvert.SerializeObject(objects);
+                var json = JsonConvert.SerializeObject(objects, Settings);
                 File.WriteAllText(FilePath, json);
             }
         }
 
         public void Clear() => objects.Clear();
+
+        public void Remove(TKey key) => Objects.Remove(key);
     }
 }
